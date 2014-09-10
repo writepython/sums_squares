@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" ng-app="squaresApp">
+
+<head>
+<meta charset="utf-8">
+<title>Difference between the Sum of the Squares and the Square of the Sum of the first n Natural Numbers</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div ng-controller="SquaresCtrl">
+
+<h2>Difference between the Sum of the Squares and the Square of the Sum of the first n Natural Numbers</h2>
+
+<h3>Enter a number between 1 and 100: <input type="text" ng-model="number" ng-change="updateNumber()"></h3>
+<br>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Number</th><th>Value</th><th>Occurrences</th><th>Datetime (UTC)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{[{result.number}]}</td>
+      <td>{[{result.value}]}</td>
+      <td>{[{result.occurrences}]}</td>
+      <td>{[{result.datetime}]}</td>
+    </tr>
+  </tbody>
+</table>
+
+<br><br>
+<h4>Server Status: {[{status}]}</h4>
+
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+<script type="text/javascript" src="{% static 'main.js' %}"></script>
+
+</body>
+</html>
+
